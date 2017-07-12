@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>tomato</title>
+    <style type="text/css">
+    .bottle{
+        margin:20px auto;
+        width: 400px;
+        background-color: #2da77a;
+        padding: 30px;
+    }
+        .display{
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            font-size: 36px;
+            font-family: fantasy;
+            color: white;
+            border: 2px solid white;
+            clear: both;
+            margin-left: 100px;
+            text-align: center;
+            line-height: 200px;
+        }
+        .display:hover{
+            cursor: pointer;
+        }
+        .i span{
+            display: block;
+            margin-top: 2px;
+            border-width: 7px;
+            border-style: solid;
+        }
+        .up{
+            border-color: transparent transparent red;
+
+        }
+        .up:hover{
+            cursor: pointer;
+        }
+        .down{
+            border-color: red transparent transparent;
+        }
+        .down:hover{
+            cursor: pointer;
+        }
+        .i{
+            display: inline-block;
+            position: relative;
+            left: 40px;
+            top: -4px;
+
+        }
+
+        .btn{
+            float: left;
+            width: 30%;
+            margin-left: 70px;
+
+        }
+        .na{
+            margin: 20px auto;
+        }
+        label{
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+        }
+        .span{
+            margin-left: 10px;
+            margin-right: 10px;
+            border-bottom: 2px solid aliceblue;
+            position: absolute;
+
+        }
+        .start{
+            font-size: 30px;
+            font-family: fantasy;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="bottle">
+    <div class="na">
+        <div class="btn"><label>time:</label><span class="span" id="time">25</span><div class="i"><span class="up" id="addtime"></span><span class="down" id="dectime"></span></div></div>
+        <div class="btn"><label>break:</label><span class="span" id="break">1</span><div class="i"><span class="up" id="addBtime"></span><span class="down" id="decBtime"></span></div></div>
+    </div>
+    <div class="display" id="show">start</div>
+</div>
+<script type="text/javascript" src="js.js"></script>
+</body>
+</html>
