@@ -49,6 +49,7 @@ show.onclick=function(){
     if(showTime>0){
             showTime--;
             show.innerHTML=convent(showTime);
+            show.style.backgroundColor = '#FF4444';
             timer=setTimeout(startTomato,1000);
         }
         else{
