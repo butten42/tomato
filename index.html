@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type="text/css">
     .bottle{
-        margin:20px auto;
+        margin:0px auto;
         width: 400px;
-        background-color: #2da77a;
         padding: 30px;
+    }
+    body{
+                background-color: #2da77a;
+
     }
         .display{
             border-radius: 50%;
@@ -17,11 +20,14 @@
             font-size: 36px;
             font-family: fantasy;
             color: white;
+            background-color: transparent;
             border: 2px solid white;
             clear: both;
             margin-left: 100px;
             text-align: center;
             line-height: 200px;
+            position: relative;
+            overflow: hidden;
         }
         .display:hover{
             cursor: pointer;
@@ -79,6 +85,18 @@
             font-family: fantasy;
             color: white;
         }
+        #fill{
+            background-color: #9acd00;
+            width: 200px;
+            z-index: -1;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+        }
+        p{
+            margin:0 auto;
+            width: 100px;
+        }
     </style>
 </head>
 <body>
@@ -87,8 +105,7 @@
         <div class="btn"><label>time:</label><span class="span" id="time">25</span><div class="i"><span class="up" id="addtime"></span><span class="down" id="dectime"></span></div></div>
         <div class="btn"><label>break:</label><span class="span" id="break">1</span><div class="i"><span class="up" id="addBtime"></span><span class="down" id="decBtime"></span></div></div>
     </div>
-    <div class="display" id="show">start</div></div>
-    <!--<div id="cover" opacity='0' background="#f44">-->
+    <div class="display" ><p id="show">start</p><span id="fill"></span></div>
 </div>
 <script type="text/javascript" src="js.js"></script>
 </body>

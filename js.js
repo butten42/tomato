@@ -6,6 +6,7 @@ var btadd=document.getElementById('addtime');
 var btdec=document.getElementById('dectime');
 var bbadd=document.getElementById('addBtime');
 var bbdec=document.getElementById('decBtime');
+var fill=document.getElementById('fill');
 
 var time=25;
 var btime=1;
@@ -48,8 +49,9 @@ show.onclick=function(){
     var startTomato=function(){
     if(showTime>0){
             showTime--;
-            show.innerHTML=convent(showTime);
-            show.style.backgroundColor = '#FF4444';
+            show.textContent=convent(showTime);
+            var fillH=1-(showTime/(tomato.innerHTML*60));
+            fill.style.height=fillH*200+'px';
             timer=setTimeout(startTomato,1000);
         }
         else{
@@ -58,6 +60,7 @@ show.onclick=function(){
             show.innerHTML=convent(breakTime);
             bt=setTimeout(startTomato,1000);
             ogg.play()||mp3.play();
+            fill.style.height=0;
             }
             else{
                 showTime=tomato.innerHTML*60;
@@ -75,6 +78,8 @@ show.onclick=function(){
     function convent(n){
     var m=Math.floor(n/60);
     var s=Math.floor(n%60);
+    if(m<10) {m='0'+m;}
+    if(s<10) {s="0"+s;}
     return m+":"+s;
 }
     var o="amongthepoor.ogg";
