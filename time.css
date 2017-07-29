@@ -1,0 +1,152 @@
+.bottle{
+    margin:0px auto;
+    width: 400px;
+    padding: 30px;
+}
+body{
+    background-color: #2da77a;
+}
+.display{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    font-size: 36px;
+    font-family: fantasy;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    clear: both;
+    margin-left: 100px;
+    text-align: center;
+    line-height: 200px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.i span{
+    display: block;
+    margin-top: 2px;
+    border-width: 7px;
+    border-style: solid;
+}
+.up{
+    border-color: transparent transparent orange;
+    cursor: pointer;
+}
+
+.down{
+    border-color: orange transparent transparent;
+    cursor: pointer;
+}
+
+.i{
+    display: inline-block;
+    position: relative;
+    left: 40px;
+    top: -4px;
+}
+.btn{
+    float: left;
+    width: 30%;
+    margin-left: 70px;
+}
+.na{
+    margin: 20px auto;
+}
+label{
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+}
+.span{
+    margin-left: 10px;
+    margin-right: 10px;
+    border-bottom: 2px solid aliceblue;
+    position: absolute;
+}
+.start{
+    font-size: 30px;
+    font-family: fantasy;
+    color: white;
+}
+#fill{
+    background-color: #9acd00;
+    width: 200px;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+p{
+    margin:0 auto;
+    width: 100px;
+}
+#task{
+margin-left: 50px;
+font-size: 20px;
+font-weight: bold;
+}
+.textarea{
+    width: 230px;
+    margin:0 auto;
+}
+#submit{
+    display: block;
+    background-color: orange;
+    cursor: pointer;
+}
+#mission{
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+#adminboard{
+    width: 400px;
+    margin-left: 40%;
+}
+#admin{
+    background-color: aliceblue;
+    display: block;
+    cursor: pointer;
+    margin-top: 10px;
+}
+#clear{
+    background-color: red;
+    display: block;
+    cursor: pointer;
+    margin-top: 10px;
+}
+#adminboard p{
+    width: 100%;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+h2{
+    margin:20px auto;
+    width: 100px;
+}
+ @media screen and (max-width: 500px) {
+.bottle{
+
+    width: 100%;
+}
+.display{
+    left: -100px;
+}
+.btn{
+    margin-left: 0;
+}
+#mission{
+    display: block;
+    margin:auto;
+}
+#task{
+    margin:auto;
+}
+#adminboard{
+    width: 100%;
+    margin:auto;
+}
+}

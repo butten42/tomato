@@ -7,7 +7,9 @@ var btdec=document.getElementById('dectime');
 var bbadd=document.getElementById('addBtime');
 var bbdec=document.getElementById('decBtime');
 var fill=document.getElementById('fill');
-
+var textarea=document.getElementById('yeah');
+var mission=document.getElementById('mission');
+var submit=document.getElementById('submit');
 var time=25;
 var btime=1;
 btadd.onclick=function(){
@@ -38,11 +40,32 @@ show.onclick=function(){
     showTime=tomato.innerHTML*60;
     breakTime=breakt.innerHTML*60;
     if(start==false){
+         startdate=Date.now();
+         date=new Date(startdate);
+         minutes=date.getMinutes();
+         if(minutes<10){minutes="0"+minutes}
+         hours=date.getHours();
+        if(hours<10){hours="0"+hours}
         startTomato();
         start=true;
     }
     else{
+        enddate=Date.now();
+        enddate=new Date(enddate);
+         endminutes=enddate.getMinutes();
+         if(endminutes<10){endminutes="0"+endminutes}
+         endhours=enddate.getHours();
+        if(endhours<10){endhours="0"+endhours}
         pause();
+        //var consume=(enddate-startdate)/1000;
+        title=mission.innerHTML;
+        if(!title){
+            title="未命名任务";
+        }
+        newItem=document.createElement("p");
+        textnode=document.createTextNode("任务："+title+",开始于："+hours+":"+minutes+",定时："+tomato.innerHTML+"分钟,结束于:"+endhours+":"+endminutes+".")
+        newItem.appendChild(textnode);
+        adminboard.insertBefore(newItem,clear);
     }
 
 }
@@ -88,4 +111,26 @@ show.onclick=function(){
     var mp3=new Audio(q);
     var timer ,bt;
 
+
+submit.onclick=function(){
+    var text=textarea.value;
+    mission.innerHTML=text;
+}
+var admin=document.getElementById('admin');
+var clear=document.getElementById('clear');
+var adminboard=document.getElementById('adminboard')
+
+function Handler(){
+    if (adminboard.style.display==='none') {
+        adminboard.style.display="block";
+    }
+    else{adminboard.style.display='none'}
+};
+admin.addEventListener('click',Handler);
+clear.onclick=function(){
+    var child=adminboard.getElementsByTagName('p');
+    for(var i=0;i<child.length;i++){
+        adminboard.removeChild(child[i]);
+    }
+}
 
