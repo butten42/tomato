@@ -11,7 +11,7 @@ var textarea=document.getElementById('yeah');
 var mission=document.getElementById('mission');
 var submit=document.getElementById('submit');
 var time=25;
-var btime=1;
+var btime=5;
 btadd.onclick=function(){
     time++;
     tomato.innerHTML=time;
